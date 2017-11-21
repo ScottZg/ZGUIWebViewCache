@@ -26,10 +26,10 @@ Add ZGWebCache folder to your project
 
 How to use
 ------------------
-1. ```#import "ZGUIWebViewCache.h"``` at AppDelegate.m
+1. ```objective-c #import "ZGUIWebViewCache.h"``` at AppDelegate.m
 2. Writing like the fllows:
 
-```
+```objective-c
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [[ZGUIWebViewCache sharedWebViewCache] initWebCacheWithCacheTypes:@[@(CacheTypeJS),@(CacheTypeImage)]];
     return YES;
@@ -50,21 +50,21 @@ you can choose what you want cache to cache。
 3. clear cache
 you can use
 
-```
+```objective-c
 [[ZGUIWebViewCache sharedWebViewCache] clearCacheWithInvalidDays:7];
 ```
 seven represent the day that cache lives time.This method you can call at```- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions```
 
 You can also use:
 
-```
+```objective-c
 - (void)clearZGCache;
 ```
 
 For Example,Personal Center Button's click and send this message.
 
 If you want to see the log,just call:
-```
+```objective-c
 [[ZGUIWebViewCache sharedWebViewCache] setDebugModel:YES];
 ```
 Default is NO.
