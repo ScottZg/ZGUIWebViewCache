@@ -18,6 +18,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [[ZGUIWebViewCache sharedWebViewCache] initWebCacheWithCacheTypes:@[@(CacheTypeJS),@(CacheTypeImage)]];
     [[ZGUIWebViewCache sharedWebViewCache] setDebugModel:YES];
+    [[ZGUIWebViewCache sharedWebViewCache] clearCacheWithInvalidDays:7];
     return YES;
 }
 
