@@ -72,7 +72,10 @@ If you want to see the log,just call:
 ```objective-c
 [[ZGUIWebViewCache sharedWebViewCache] setDebugModel:YES];
 ```
-Default is NO.
+Default is NO.   
+
+If you still can't understand how to use,you can see the demo for more information.
+
 MIT License
 -----------
     Copyright (c) 2017 Zhanggui
