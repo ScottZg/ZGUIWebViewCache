@@ -38,7 +38,7 @@ How to use
 ```
 CacheTypes are as Fllows:
 
-```
+```objective-c
 typedef NS_ENUM(NSInteger,CacheType) {    
     CacheTypeImage = 4,
     CacheTypeJS,
