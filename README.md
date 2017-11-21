@@ -54,7 +54,11 @@ you can use
 [[ZGUIWebViewCache sharedWebViewCache] clearCacheWithInvalidDays:7];
 ```
 seven represent the day that cache lives time.   
-This method you can call at```objective-c - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions```
+This method you can call at
+
+```objective-c 
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+```
 
 You can also use:
 
