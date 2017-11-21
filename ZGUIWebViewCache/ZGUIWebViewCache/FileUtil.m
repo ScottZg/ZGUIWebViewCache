@@ -32,7 +32,7 @@ static inline NSString *cachePathForKey(NSString *key) {
 
 
 
-@property (nonatomic,strong)dispatch_queue_t queue;
+@property (nonatomic,strong)dispatch_queue_t zgQueue;
 @end
 
 
@@ -51,7 +51,6 @@ static inline NSString *cachePathForKey(NSString *key) {
 - (id)init {
     self = [super init];
     if (self) {
-         _queue = dispatch_queue_create("com.zgCache.zgCache", DISPATCH_QUEUE_CONCURRENT);
         _debug = true;
     }
     return self;
@@ -100,7 +99,7 @@ static inline NSString *cachePathForKey(NSString *key) {
     NSString *filePath = cachePathForKey(key);
     NSURL *fileUrl = [NSURL fileURLWithPath:filePath];
     [self.cache setObject:data forKey:key];
-    dispatch_async(_queue, ^{
+    dispatch_async(self.zgQueue, ^{
         BOOL boo =  [[NSFileManager defaultManager] createFileAtPath:fileUrl.path contents:data attributes:nil];
         if (boo) {
             NSString *str = [NSString stringWithFormat:@"创建%@成功",filePath];
@@ -117,7 +116,12 @@ static inline NSString *cachePathForKey(NSString *key) {
         NSLog(@"%@", str);
     }
 }
-
+- (dispatch_queue_t)zgQueue {
+    if (!_zgQueue) {
+        _zgQueue = dispatch_queue_create("com.zgCache.zgCache", DISPATCH_QUEUE_CONCURRENT);
+    }
+    return _zgQueue;
+}
 - (NSCache *)cache {
     if (!_cache) {
         _cache = [[NSCache alloc] init];
