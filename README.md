@@ -26,7 +26,7 @@ Add ZGWebCache folder to your project
 
 How to use
 ------------------
-1.import
+1. import
 
  ```objective-c
  #import "ZGUIWebViewCache.h"
@@ -53,7 +53,9 @@ typedef NS_ENUM(NSInteger,CacheType) {
 };
 ```
 you can choose what you want cache to cache。  
+
 3. clear cache
+
 you can use
 
 ```objective-c
