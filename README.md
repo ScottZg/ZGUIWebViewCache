@@ -2,7 +2,7 @@
 
 ZGUIWebViewCache is a tool that help users to realize Application cache.You can choose what you want to cache.
 
-If you use WKWebView,please see this(it will show later).  
+If you use WKWebView,please see [this](https://github.com/ScottZg/ZGWKWebViewCache).
 
 This is the catalog：   
 ![catalog](https://raw.githubusercontent.com/ScottZg/ZGUIWebViewCache/master/catalog.png)
@@ -30,9 +30,9 @@ How to use
 
  ```objective-c
  #import "ZGUIWebViewCache.h"
- ``` 
+ ```
  at AppDelegate.m    
- 
+
 2. Writing like the fllows:
 
 ```objective-c
@@ -95,10 +95,10 @@ MIT License
     distribute, sublicense, and/or sell copies of the Software, and to
     permit persons to whom the Software is furnished to do so, subject to
     the following conditions:
-
+    
     The above copyright notice and this permission notice shall be included
     in all copies or substantial portions of the Software.
-
+    
     THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
     OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
     MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
